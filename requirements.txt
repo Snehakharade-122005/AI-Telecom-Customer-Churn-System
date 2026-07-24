@@ -3,10 +3,8 @@ pandas
 numpy
 plotly
 mysql-connector-python
-tensorflow==2.16.1
+tensorflow-cpu==2.16.1
 scikit-learn
 joblib
-fastapi
-uvicorn
 shap
 streamlit-autorefresh
