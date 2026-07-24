@@ -66,7 +66,7 @@ def load_data():
     conn = get_connection()
 
     df = pd.read_sql(
-        "SELECT * FROM predictions",
+        "SELECT * FROM predictions ORDER BY id DESC",
         conn
     )
 
