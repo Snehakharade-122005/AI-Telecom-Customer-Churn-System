@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+scikit-learn
+tensorflow
+fastapi
+uvicorn
+mysql-connector-python
+plotly
+joblib
+shap
+matplotlib
+streamlit-autorefresh
