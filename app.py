@@ -409,7 +409,7 @@ if predict:
     )
 
 
-    save_prediction(prediction_data)
+   #  save_prediction(prediction_data)
 
 
     st.success(
