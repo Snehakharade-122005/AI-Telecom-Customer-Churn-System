@@ -3,7 +3,7 @@ pandas
 numpy
 plotly
 mysql-connector-python
-tensorflow
+tensorflow==2.16.1
 scikit-learn
 joblib
 fastapi
