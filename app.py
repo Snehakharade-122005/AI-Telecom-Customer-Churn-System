@@ -388,7 +388,7 @@ if predict:
  # -------------------------------------------------
 # Save Prediction into MySQL
 # -------------------------------------------------
-
+st.write("Gender selected:", gender)
 prediction_data = (
 
     gender,
