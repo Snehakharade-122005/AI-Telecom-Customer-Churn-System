@@ -199,8 +199,7 @@ The AI Telecom Customer Churn Prediction System is deployed using Streamlit Clou
 
 Live Application:
 
-https://ai-telecom-customer-churn-system.streamlit.app
-
+https://ai-telecom-customer-churn-system-uqstc2ufbfvwahmjv6s5bd.streamlit.app/
 
 ⚡ FastAPI API Documentation
 
