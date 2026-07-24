@@ -69,6 +69,7 @@ def load_data():
         "SELECT * FROM predictions ORDER BY id DESC",
         conn
     )
+    st.write(df)
 
     conn.close()
 
