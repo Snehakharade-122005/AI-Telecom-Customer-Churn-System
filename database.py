@@ -9,10 +9,11 @@ def get_connection():
 
     connection = mysql.connector.connect(
 
-        host="localhost",
+        host="sakura.proxy.rlwy.net",
+        port=34046,
         user="root",
-        password="mysql@123",
-        database="telecom_churn"
+        password="ZTJTyCjqqdgWkWfFHbVRHPdRqfoLjHkL",
+        database="railway"
 
     )
 

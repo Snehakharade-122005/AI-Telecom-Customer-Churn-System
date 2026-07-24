@@ -48,12 +48,13 @@ div[data-testid="metric-container"]{
 
 def get_connection():
 
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="mysql@123",
-        database="telecom_churn"
-    )
+   return mysql.connector.connect(
+    host="sakura.proxy.rlwy.net",
+    port=34046,
+    user="root",
+    password="ZTJTyCjqqdgWkWfFHbVRHPdRqfoLjHkL",
+    database="railway"
+)
 
 # =====================================================
 # LOAD DATA
