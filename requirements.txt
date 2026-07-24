@@ -1,13 +1,12 @@
 streamlit
 pandas
 numpy
-scikit-learn
+plotly
+mysql-connector-python
 tensorflow
+scikit-learn
+joblib
 fastapi
 uvicorn
-mysql-connector-python
-plotly
-joblib
 shap
-matplotlib
 streamlit-autorefresh
