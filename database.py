@@ -43,14 +43,13 @@ def save_prediction(data):
         total_charges,
         prediction,
         probability,
-        risk,
-        revenue_risk
+        risk
     )
     VALUES
     (
         %s, %s, %s, %s, %s,
         %s, %s, %s, %s,
-        %s, %s, %s, %s, %s, %s
+        %s, %s, %s, %s, %s
     )
     """
 
