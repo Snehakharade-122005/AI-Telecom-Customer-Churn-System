@@ -21,12 +21,11 @@ st.set_page_config(
 def get_connection():
 
     connection = mysql.connector.connect(
-
-        host="localhost",
-        user="root",
-        password="mysql@123",
-        database="telecom_churn"
-
+          host="sakura.proxy.rlwy.net",
+    port=34046,
+    user="root",
+    password="ZTJTyCjqqdgWkWfFHbVRHPdRqfoLjHkL",
+    database="railway"
     )
 
     return connection
