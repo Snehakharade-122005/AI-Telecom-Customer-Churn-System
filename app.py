@@ -385,126 +385,123 @@ if predict:
 
 
     # -------------------------------------------------
-    # Save Prediction into MySQL
-    # -------------------------------------------------
+ # -------------------------------------------------
+# Save Prediction into MySQL
+# -------------------------------------------------
 
-    prediction_data = (
+prediction_data = (
 
-        gender,
-        senior,
-        partner,
-        dependents,
-        tenure,
-        phone,
-        multiple,
-        internet,
-        contract,
-        monthly,
-        total,
-        result,
-        float(probability),
-        risk,
-        float(revenue_risk)
+    gender,
+    senior,
+    partner,
+    dependents,
+    tenure,
+    phone,
+    multiple,
+    internet,
+    contract,
+    monthly,
+    total,
+    result,
+    float(probability),
+    risk
 
+)
+
+save_prediction(prediction_data)
+
+
+st.success(
+    "✅ Prediction saved to MySQL database"
+)
+
+
+# -------------------------------------------------
+# AI Recommendation
+# -------------------------------------------------
+
+st.subheader(
+    "🤖 AI Recommendation"
+)
+
+
+if contract == "Month-to-month":
+
+    st.write(
+        "✅ Offer long-term contract discounts to improve retention."
     )
 
 
-   #  save_prediction(prediction_data)
+if monthly > 80:
 
-
-    st.success(
-        "✅ Prediction saved to MySQL database"
+    st.write(
+        "✅ Provide personalized pricing plans because monthly charges are high."
     )
 
 
+if tech_support == "No":
 
-    # -------------------------------------------------
-    # AI Recommendation
-    # -------------------------------------------------
-
-    st.subheader(
-        "🤖 AI Recommendation"
+    st.write(
+        "✅ Recommend adding technical support service."
     )
 
 
-    if contract == "Month-to-month":
+if tenure < 12:
 
-        st.write(
-            "✅ Offer long-term contract discounts to improve retention."
-        )
-
-
-    if monthly > 80:
-
-        st.write(
-            "✅ Provide personalized pricing plans because monthly charges are high."
-        )
-
-
-    if tech_support == "No":
-
-        st.write(
-            "✅ Recommend adding technical support service."
-        )
-
-
-    if tenure < 12:
-
-        st.write(
-            "✅ Provide new customer engagement offers."
-        )
-
-
-    if risk_score >= 75:
-
-        st.write(
-            "⚠️ Assign customer executive because customer has high churn probability."
-        )
-
-    else:
-
-        st.write(
-            "✅ Continue loyalty programs for this customer."
-        )
-
-
-
-    # -------------------------------------------------
-    # SHAP EXPLANATION
-    # -------------------------------------------------
-
-    st.markdown("---")
-
-    st.subheader(
-        "🔍 Why is this customer at risk?"
+    st.write(
+        "✅ Provide new customer engagement offers."
     )
 
 
-    try:
+if risk_score >= 75:
 
-        shap_result = get_shap_explanation(
-            model,
-            scaled_data,
-            scaled_data,
-            customer_data.columns
-        )
+    st.write(
+        "⚠️ Assign customer executive because customer has high churn probability."
+    )
 
+else:
 
-        st.write(
-            "Top factors influencing prediction:"
-        )
+    st.write(
+        "✅ Continue loyalty programs for this customer."
+    )
 
 
-        st.dataframe(
-            shap_result,
-            width="stretch"
-        )
+# -------------------------------------------------
+# SHAP EXPLANATION
+# -------------------------------------------------
+
+st.markdown("---")
+
+st.subheader(
+    "🔍 Why is this customer at risk?"
+)
 
 
-    except Exception as e:
+try:
 
-        st.warning(
-            "SHAP explanation could not be generated."
-        )
+    shap_result = get_shap_explanation(
+        model,
+        scaled_data,
+        scaled_data,
+        customer_data.columns
+    )
 
-        st.write(e)
+
+    st.write(
+        "Top factors influencing prediction:"
+    )
+
+
+    st.dataframe(
+        shap_result,
+        width="stretch"
+    )
+
+
+except Exception as e:
+
+    st.warning(
+        "SHAP explanation could not be generated."
+    )
+
+    st.write(e)
