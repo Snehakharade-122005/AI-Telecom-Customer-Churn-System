@@ -405,6 +405,7 @@ prediction_data = (
     result,
     float(probability),
     risk
+    float(revenue_risk)
 
 )
 
