@@ -44,6 +44,7 @@ def save_prediction(data):
         prediction,
         probability,
         risk
+        float(revenue_risk)
     )
     VALUES
     (
