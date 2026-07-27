@@ -191,21 +191,28 @@ The dashboard provides:
 
 ---
 
-# 🌐 Live Demo
+🌐 Live Demo
 
-### 🖥 Streamlit Application
+🖥 Streamlit Application (Deployed)
 
-Coming Soon
+The AI Telecom Customer Churn Prediction System is deployed using Streamlit Cloud.
 
-```
-https://your-streamlit-url.streamlit.app
-```
+Live Application:
 
-### ⚡ FastAPI
+https://ai-telecom-customer-churn-system-uqstc2ufbfvwahmjv6s5bd.streamlit.app/
 
-```
+⚡ FastAPI API Documentation
+
+Local API Documentation:
+
 http://127.0.0.1:8000/docs
-```
+
+
+Cloud Services Used:
+
+- Streamlit Cloud → Web Application Deployment
+- Railway MySQL → Cloud Database
+- GitHub → Version Control and Code Repository
 
 ---
 
