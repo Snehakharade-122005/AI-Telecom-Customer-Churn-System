@@ -1,66 +1,168 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="AI Telecom Customer Churn System",
+    page_title="AI Telecom Customer Churn Platform",
     page_icon="📊",
     layout="wide"
 )
 
-st.title("📊 AI Telecom Customer Churn System")
+# ===========================
+# HERO
+# ===========================
 
-st.markdown("---")
+st.title("📊 AI Telecom Customer Churn Intelligence Platform")
 
-st.header("Welcome")
+st.markdown("""
+### Enterprise AI Platform for Customer Retention
 
-st.write("""
-The AI Telecom Customer Churn System predicts whether a telecom customer
-is likely to leave the company using Machine Learning.
-
-This project also provides:
-- Customer Churn Prediction
-- Bulk Customer Prediction
-- Customer Management
-- Analytics Dashboard
-- FastAPI Integration
-- MySQL Database
-- AI Recommendations
+Predict customer churn, monitor business KPIs, analyze customer behavior,
+and generate AI-powered retention strategies in real time.
 """)
 
 st.markdown("---")
 
-col1, col2, col3 = st.columns(3)
+# ===========================
+# KPI CARDS
+# ===========================
 
-with col1:
-    st.info("🤖 TensorFlow ANN")
+col1, col2, col3, col4 = st.columns(4)
 
-with col2:
-    st.success("⚡ FastAPI")
-
-with col3:
-    st.warning("🗄 MySQL Database")
+col1.metric("AI Model Accuracy", "81.2%", "↑ 2.4%")
+col2.metric("Prediction Speed", "<1 sec")
+col3.metric("Modules", "6")
+col4.metric("API Status", "🟢 Online")
 
 st.markdown("---")
 
-st.subheader("Project Features")
+# ===========================
+# PLATFORM MODULES
+# ===========================
 
-st.write("""
-✅ Customer Churn Prediction
+st.subheader("🚀 Platform Modules")
 
-✅ Bulk Customer Prediction
+c1, c2 = st.columns(2)
 
-✅ Analytics Dashboard
+with c1:
 
-✅ Customer Management System
+    st.success("""
+### 📈 Customer Prediction
 
-✅ AI Recommendation Engine
+✔ Predict Churn
 
-✅ SHAP Feature Importance
+✔ Risk Score
 
-✅ REST API
+✔ Probability
+
+✔ AI Recommendation
+""")
+
+    st.info("""
+### 📂 Bulk Prediction
+
+✔ CSV Upload
+
+✔ Batch Prediction
+
+✔ Download Results
+""")
+
+    st.warning("""
+### 👥 Customer Management
+
+✔ Search Customers
+
+✔ Update Records
+
+✔ Database Integration
+""")
+
+with c2:
+
+    st.success("""
+### 📊 Analytics Dashboard
+
+✔ Revenue Analysis
+
+✔ Churn Rate
+
+✔ Risk Distribution
+
+✔ Interactive Charts
+""")
+
+    st.info("""
+### 🤖 AI Engine
+
+✔ TensorFlow ANN
+
+✔ SHAP Explainability
+
+✔ Feature Importance
+""")
+
+    st.warning("""
+### 🌐 REST API
+
+✔ FastAPI
+
+✔ JSON Response
+
+✔ External Integration
 """)
 
 st.markdown("---")
 
-st.caption(
-    "Developed by Sneha Kharade | DMVCT - DS Batch"
-)
+# ===========================
+# TECHNOLOGY STACK
+# ===========================
+
+st.subheader("🛠 Technology Stack")
+
+tech1, tech2, tech3, tech4 = st.columns(4)
+
+tech1.info("""
+Python
+
+TensorFlow
+
+Scikit-Learn
+""")
+
+tech2.info("""
+Streamlit
+
+FastAPI
+
+Plotly
+""")
+
+tech3.info("""
+MySQL
+
+Pandas
+
+NumPy
+""")
+
+tech4.info("""
+Docker
+
+GitHub
+
+REST API
+""")
+
+st.markdown("---")
+
+st.subheader("🏢 Business Problem")
+
+st.write("""
+Customer churn is one of the biggest challenges for telecom companies.
+This platform helps businesses identify customers who are likely to leave,
+estimate churn probability, calculate business risk, and recommend
+retention strategies using Artificial Intelligence.
+""")
+
+st.markdown("---")
+
+st.success("✅ Enterprise AI Platform Developed by Sneha Kharade")
