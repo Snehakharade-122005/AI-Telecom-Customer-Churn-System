@@ -198,8 +198,7 @@ The dashboard provides:
 The AI Telecom Customer Churn Prediction System is deployed using Streamlit Cloud.
 
 Live Application:
-
-https://ai-telecom-customer-churn-system-uqstc2ufbfvwahmjv6s5bd.streamlit.app/
+https://ai-telecom-customer-churn-system-hahz7l6wcoffnnejbcbw6q.streamlit.app/
 
 ⚡ FastAPI API Documentation
 
