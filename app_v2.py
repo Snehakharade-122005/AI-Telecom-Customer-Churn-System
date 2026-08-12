@@ -3,14 +3,29 @@ import pandas as pd
 import plotly.graph_objects as go
 import time
 
-from database import save_prediction
+
 from model_utils import model, scaler, label_encoders
 from shap_explanation import get_shap_explanation
+from database import save_prediction
+
 
 
 # ============================================================
 # PAGE CONFIGURATION
 # ============================================================
+
+st.set_page_config(
+    page_title="AI Telecom Customer Intelligence Platform",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
+
+# =====================================================
+# PAGE CONFIGURATION
+# =====================================================
 
 st.set_page_config(
     page_title="AI Telecom Customer Intelligence Platform",
@@ -95,7 +110,7 @@ section[data-testid="stSidebar"]{
 with st.sidebar:
 
 
-    st.title("🤖 AI Telecom")
+    st.title(" AI Telecom")
 
 
     st.markdown("---")
@@ -129,6 +144,7 @@ with st.sidebar:
 
 
 """)
+     
 
 
 
@@ -138,7 +154,7 @@ with st.sidebar:
 
 
 st.title(
-    "📊 AI Telecom Customer Intelligence Platform"
+    " AI Telecom Customer Intelligence Platform"
 )
 
 
@@ -199,7 +215,7 @@ st.divider()
 # CUSTOMER PROFILE SECTION
 # ============================================================
 
-st.header("👤 Customer Profile")
+st.header(" Customer Profile")
 
 
 left, right = st.columns(2)
@@ -413,7 +429,7 @@ with right:
 st.markdown("---")
 
 
-st.header("🚀 AI Prediction Engine")
+st.header(" AI Prediction Engine")
 
 
 st.write(
@@ -423,7 +439,7 @@ st.write(
 
 
 predict = st.button(
-    "🚀 Analyze Customer",
+    " Analyze Customer",
     use_container_width=True
 )
 
@@ -621,7 +637,7 @@ if predict:
 
 
         st.header(
-            "📊 Executive Dashboard"
+            " Executive Dashboard"
         )
 
 
@@ -783,7 +799,7 @@ if predict:
 
 
         st.subheader(
-            "🎯 Recommended Retention Strategy"
+            " Recommended Retention Strategy"
         )
 
 
@@ -846,7 +862,7 @@ if predict:
 
 
         st.header(
-            "💰 Business Impact"
+            " Business Impact"
         )
 
 
@@ -881,7 +897,7 @@ if predict:
 
 
         st.header(
-            "🧠 AI Explainability"
+            " AI Explainability"
         )
 
 
@@ -933,7 +949,7 @@ if predict:
 
 
         st.header(
-            "📄 Download Prediction Report"
+            " Download Prediction Report"
         )
 
 
@@ -1027,7 +1043,7 @@ Generated using AI Telecom Platform
 
 
         st.header(
-            "🕒 Current Session Prediction"
+            " Current Session Prediction"
         )
 
 
@@ -1068,7 +1084,7 @@ Generated using AI Telecom Platform
 
 
         st.header(
-            "📈 Executive Analytics Dashboard"
+            " Executive Analytics Dashboard"
         )
 
 
@@ -1191,7 +1207,7 @@ Generated using AI Telecom Platform
 
 
         st.subheader(
-            "💚 Customer Health Score"
+            " Customer Health Score"
         )
 
 
@@ -1225,7 +1241,7 @@ Generated using AI Telecom Platform
 
 
         st.subheader(
-            "🧠 AI Decision Summary"
+            " AI Decision Summary"
         )
 
 

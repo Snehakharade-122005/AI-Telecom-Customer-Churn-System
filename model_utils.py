@@ -11,44 +11,79 @@ def load_resources():
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
-    model_path = os.path.join(
+    MODEL_PATH = os.path.join(
         BASE_DIR,
         "models",
         "customer_churn_ann.keras"
     )
 
-
-    scaler_path = os.path.join(
+    SCALER_PATH = os.path.join(
         BASE_DIR,
         "models",
         "scaler.pkl"
     )
 
-
-    encoder_path = os.path.join(
+    ENCODER_PATH = os.path.join(
         BASE_DIR,
         "models",
         "label_encoders.pkl"
     )
 
+    # -------------------------------------------------
+    # Debug paths
+    # -------------------------------------------------
 
-    # Load TensorFlow ANN Model
-    model = load_model(model_path)
+    print("Model Path:", MODEL_PATH)
+    print("Scaler Path:", SCALER_PATH)
+    print("Encoder Path:", ENCODER_PATH)
 
+    # -------------------------------------------------
+    # Check files exist
+    # -------------------------------------------------
 
-    # Load StandardScaler
-    scaler = joblib.load(scaler_path)
+    if not os.path.exists(MODEL_PATH):
+        raise FileNotFoundError("❌ Model file not found")
 
+    if not os.path.exists(SCALER_PATH):
+        raise FileNotFoundError("❌ Scaler file not found")
 
-    # Load Label Encoders
-    label_encoders = joblib.load(encoder_path)
+    if not os.path.exists(ENCODER_PATH):
+        raise FileNotFoundError("❌ Encoder file not found")
 
+    # -------------------------------------------------
+    # Load TensorFlow Model
+    # -------------------------------------------------
+
+    model = load_model(
+        MODEL_PATH,
+        compile=False
+    )
+
+    # -------------------------------------------------
+    # Load Scaler
+    # -------------------------------------------------
+
+    scaler = joblib.load(SCALER_PATH)
+
+    # -------------------------------------------------
+    # Load Encoders
+    # -------------------------------------------------
+
+    label_encoders = joblib.load(ENCODER_PATH)
+
+    # -------------------------------------------------
+    # Debug Information
+    # -------------------------------------------------
+
+    print("✅ Model Loaded")
+    print("Scaler Features:", scaler.n_features_in_)
+    print("Encoders:", label_encoders.keys())
 
     return model, scaler, label_encoders
 
 
-
-# Initialize resources
+# -------------------------------------------------
+# Initialize Resources
+# -------------------------------------------------
 
 model, scaler, label_encoders = load_resources()

@@ -94,7 +94,7 @@ st.sidebar.title("📊 AI Telecom Dashboard")
 st.sidebar.markdown("---")
 
 search = st.sidebar.text_input(
-    "🔍 Search Customer"
+    " Search Customer"
 )
 
 risk_filter = st.sidebar.multiselect(
@@ -152,7 +152,7 @@ if search:
 # HEADER
 # =====================================================
 
-st.title("📊 AI Telecom Customer Churn Analytics Dashboard")
+st.title(" AI Telecom Customer Churn Analytics Dashboard")
 
 st.caption(
     "TensorFlow • FastAPI • Streamlit • MySQL"
@@ -210,7 +210,7 @@ c1,c2,c3,c4 = st.columns(4)
 with c1:
 
     st.metric(
-        "👥 Total Customers",
+        " Total Customers",
         total_customers
     )
 
@@ -224,14 +224,14 @@ with c2:
 with c3:
 
     st.metric(
-        "💰 Revenue At Risk",
+        " Revenue At Risk",
         f"₹ {revenue:,.2f}"
     )
 
 with c4:
 
     st.metric(
-        "📉 Churn Rate",
+        " Churn Rate",
         f"{churn_rate:.2f}%"
     )
 
@@ -241,7 +241,7 @@ st.markdown("---")
 # =====================================================
 
 tab1, tab2, tab3 = st.tabs(
-    ["📊 Overview", "📈 Analytics", "💰 Revenue"]
+    [" Overview", " Analytics", " Revenue"]
 )
 
 # =====================================================
@@ -254,7 +254,7 @@ with tab1:
 
     with col1:
 
-        st.subheader("🥧 Customer Churn Distribution")
+        st.subheader(" Customer Churn Distribution")
 
         churn = filtered_df["prediction"].value_counts()
 
@@ -276,7 +276,7 @@ with tab1:
 
     with col2:
 
-        st.subheader("📊 Risk Level Distribution")
+        st.subheader(" Risk Level Distribution")
 
         risk = filtered_df["risk"].value_counts()
 
@@ -309,7 +309,7 @@ with tab2:
 
     with col1:
 
-        st.subheader("📄 Contract Analysis")
+        st.subheader(" Contract Analysis")
 
         fig = px.histogram(
             filtered_df,
@@ -329,7 +329,7 @@ with tab2:
 
     with col2:
 
-        st.subheader("👨 Gender Analysis")
+        st.subheader(" Gender Analysis")
 
         fig = px.histogram(
             filtered_df,
@@ -347,7 +347,7 @@ with tab2:
             use_container_width=True
         )
 
-    st.subheader("📈 Prediction Trend")
+    st.subheader(" Prediction Trend")
 
     trend = (
         filtered_df
@@ -382,7 +382,7 @@ with tab3:
 
     with col1:
 
-        st.subheader("💰 Revenue at Risk")
+        st.subheader(" Revenue at Risk")
 
         fig = px.bar(
             filtered_df,
@@ -402,7 +402,7 @@ with tab3:
 
     with col2:
 
-        st.subheader("📊 Probability Distribution")
+        st.subheader(" Probability Distribution")
 
         fig = px.histogram(
             filtered_df,
@@ -447,7 +447,7 @@ st.markdown("---")
 # LATEST PREDICTIONS
 # =====================================================
 
-st.header("📋 Latest Predictions")
+st.header(" Latest Predictions")
 
 latest = search_df.sort_values(
     by="prediction_date",
@@ -465,7 +465,7 @@ st.markdown("---")
 # HIGH RISK CUSTOMERS
 # =====================================================
 
-st.header("🚨 High Risk Customers")
+st.header(" High Risk Customers")
 
 high_risk_df = search_df[
     search_df["risk"] == "🔴 High Risk"
@@ -488,7 +488,7 @@ st.markdown("---")
 # TOP REVENUE RISK CUSTOMERS
 # =====================================================
 
-st.header("🏆 Top Revenue Risk Customers")
+st.header(" Top Revenue Risk Customers")
 
 top = search_df.sort_values(
     by="revenue_risk",
@@ -520,7 +520,7 @@ st.markdown("---")
 # EXECUTIVE DASHBOARD
 # =====================================================
 
-st.header("📊 Executive Summary")
+st.header(" Executive Summary")
 
 col1, col2 = st.columns([2, 3])
 
@@ -549,7 +549,7 @@ with col1:
 with col2:
 
     st.info(f"""
-### 📈 Prediction Summary
+###  Prediction Summary
 
 👥 **Total Customers:** {total_customers}
 
@@ -572,7 +572,7 @@ st.markdown("---")
 # REVENUE SUMMARY
 # =====================================================
 
-st.header("💰 Revenue Summary")
+st.header(" Revenue Summary")
 
 c1, c2, c3 = st.columns(3)
 
@@ -600,7 +600,7 @@ st.markdown("---")
 # COMPLETE HISTORY
 # =====================================================
 
-st.header("📑 Complete Prediction History")
+st.header(" Complete Prediction History")
 
 st.dataframe(
     search_df,
@@ -613,12 +613,12 @@ st.markdown("---")
 # FOOTER
 # =====================================================
 
-st.success("✅ AI Telecom Customer Churn Dashboard Loaded Successfully")
+st.success(" AI Telecom Customer Churn Dashboard Loaded Successfully")
 
 st.markdown(
 """
 ---
-### 👨‍💻 Project Information
+###  Project Information
 
 **Project:** AI Telecom Customer Churn Prediction System
 

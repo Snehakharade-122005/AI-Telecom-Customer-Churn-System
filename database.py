@@ -1,5 +1,5 @@
 import mysql.connector
-
+import pandas as pd
 
 # -------------------------------------------------
 # MySQL Connection
@@ -61,3 +61,21 @@ def save_prediction(data):
     cursor.close()
 
     conn.close()
+
+
+
+# ==========================================
+# Get All Predictions
+# ==========================================
+
+def get_all_predictions():
+
+    conn = get_connection()
+
+    query = "SELECT * FROM predictions"
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
